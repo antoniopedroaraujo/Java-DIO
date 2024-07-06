@@ -18,8 +18,12 @@ public class ContagemPalavras {
         palavrasMap.remove(palavra);
     }
 
-    public void exibirContagemPalavras() {
-        System.out.println(palavrasMap);
+    public int exibirContagemPalavras() {
+        int total = 0;
+        for (int contagem:palavrasMap.values()){
+            total+=contagem;
+        }
+        return total;
     }
      public Map.Entry<String,Integer> encontrarPalavraMaisFrequente() {
         Map.Entry<String,Integer >maiorQuantidade = new Map.Entry<String, Integer>() {

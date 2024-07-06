@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class SomaNumeros {
     private ArrayList<Integer> numerosList;
 
+    public SomaNumeros() {
+        this.numerosList = new ArrayList<>();
+    }
+
     public void adicionarNumero(int numero){
         numerosList.add(numero);
     }

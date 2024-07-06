@@ -6,6 +6,10 @@ import java.util.Set;
 public class ListaTarefas {
     private Set<Tarefa> tarefaSet;
 
+    public ListaTarefas() {
+        this.tarefaSet = new HashSet<>();
+    }
+
     public void adicionarTarefa(String descricao){
         tarefaSet.add(new Tarefa(descricao,false));
     }

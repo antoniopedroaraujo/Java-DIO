@@ -15,7 +15,11 @@ public class AgendaContatos {
     }
 
     public void exibirContatos(){
-        System.out.println(contatoSet);
+        if (!contatoSet.isEmpty()){
+            System.out.println(contatoSet);
+        } else {
+            System.out.println("O conjunto está vazio");
+        }
     }
     public Set<Contato> pesquisarPorNome(String nome){
         Set<Contato> contatosPorNome = new HashSet<>();

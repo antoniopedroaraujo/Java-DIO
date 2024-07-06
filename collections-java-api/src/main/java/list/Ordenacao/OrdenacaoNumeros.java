@@ -3,6 +3,7 @@ package main.java.list.Ordenacao;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class OrdenacaoNumeros {
     private ArrayList<Integer> numerosList;
@@ -11,12 +12,19 @@ public class OrdenacaoNumeros {
         numerosList.add(numero);
     }
 
-    public void ordenarAscendente(){
-        Collections.sort(numerosList,new Ascendente());
+    public List<Integer> ordenarAscendente(){
+        List<Integer> numerosAscendentes = new ArrayList<>(numerosList);
+        Collections.sort(numerosAscendentes,new Ascendente());
+        return numerosAscendentes;
     }
 
-    public void ordenarDescendente(){
-        Collections.sort(numerosList,new Descendente());
+    public List<Integer> ordenarDescendente(){
+        List<Integer> numerosDescendentes = new ArrayList<>(numerosList);
+        Collections.sort(numerosDescendentes,new Descendente());
+        return numerosDescendentes;
+    }
+    public void exibirNumeros(){
+        System.out.println(numerosList);
     }
 }
 
